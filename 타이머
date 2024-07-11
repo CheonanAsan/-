@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;            높이: 100vh;
+            margin: 0;            여백: 0;
+            background-color: #121212;            background-color: #121212;
+            color: #ffffff;            color: #ffffff;
+        }        }
+        .timer {        .타이머 {
+            font-size: 5em;            글꼴 크기: 5em;
+            color: #ff0000;            색상: #ff0000;
+            background: #000000;            배경: #000000;
+            padding: 20px;            패딩: px;
+            border-radius: 10px;            국경-radius: px;
+            margin-top: 20px;            여백 상단: 20 px;
+        }        }
+        .controls {        .controls {
+            margin-top: 20px;            여백 상단: 20 px;
+        }        }
+        button, input {        버튼, 입력 {
+            margin: 5px;            여백: px;
+            padding: 10px 20px;            패딩 : 10 px 20 px;
+            font-size: 1em;            글꼴 크기: 1em;
+            background-color: #333333;            background-color: #333333;
+            color: #ffffff;            color: #ffffff;
+            border: none;            테두리: 없음;
+            border-radius: 5px;            국경-radius: 5 px;
+            cursor: pointer;            커서: 포인터;
+        }        }
+        button:disabled, input:disabled {        버튼:사용 안 함, 입력:사용 안 함 {
+            background-color: #555555;            background-color: #555555;
+            cursor: not-allowed;            커서: allowed 아님;
+        }        }
+        button:hover:not(:disabled), input:hover:not(:disabled) {        버튼:hover:not(:disabled), 입력:hover:not(:disabled) {
+            background-color: #555555;            background-color: #555555;            background-color: #555555; background-color: #555555;
+        }        }        }        }
+        input[type="number"], input[type="text"] {        input[type="number"], input[type="text"] {        input[type="number"], input[type="text"] {input[type="number"], input[type="text"] {        input[type="number"], input[type="text"] {input[type="number"], input[type="text"] {input[type="number"], input[type="text"], input[type="number"], input[type="text"] {
+            width: 80px;            폭: px;            폭: px, 폭: px,            폭: px; 폭: px; 폭: px, 폭: px,
+            text-align: center;            텍스트-align: 중앙;            텍스트-align: 중앙; 텍스트-align: 중앙;            text-align: center;            텍스트-align: 중앙;            텍스트-align: 중앙; 텍스트-align: 중앙;
+        }        }        }        }        }        }        }        }        }        }        }        }        }        }        }        }
+    </style>    </스타일>    </스타일> </스타일>    </style>    </스타일>    </스타일> </스타일>
+</head></머리></머리></머리></head></머리></머리></머리>
+<body><몸><바디><몸><body><몸><바디><몸>
+    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>    <h1>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</h1>
+    <div>    <div>    <div> <div>    <div> <div> <div> <div>
+        <button onclick="setTime(1)">1분</button>        <버튼 on click="setTime(1)">1분</button>        <버튼 on click="setTime(1)">1분</button><버튼 on click="setTime(1)">1분</button>        <버튼 on click="setTime(1)">1분</button><버튼 on click="setTime(1)">1분</button><버튼 on click="setTime(1)">1분</button><버튼 onclick="setTime(1)">1분</button>
+        <button onclick="setTime(3)">3분</button>        <버튼 on click="setTime(3)">3분</button>        <버튼 on click="setTime(3)">3분</button><버튼 on click="setTime(3)">3분</button>        <버튼 on click="setTime(3)">3분</button><버튼 on click="setTime(3)">3분</button><버튼 on click="setTime(3)">3분</button><버튼 onclick="setTime(3)">3분</button>
+        <button onclick="setTime(5)">5분</button>        <버튼 on click="setTime(5)">분</button>        <버튼 on click="setTime(5)">분</button><버튼 on click="setTime(5)">분</button>        <버튼 on click="setTime(5)">5분</button><버튼 on click="setTime(5)">분</button><버튼 onclick="setTime(5)">분</button><버튼 onclick="setTime(5)">분</button>
+    </div>    </div>    </div> </div>
+    <div class="timer" id="timerDisplay">01:00</div>    <div class="timer" id="timerDisplay"> 01:00</div>    <div class="timer" id="timerDisplay"> 01:00</div> <div class="timer" id="timerDisplay"> 01:00</div>
+    <div class="controls">    <div class="controls">    <div class="controls"> <div class="controls">
+        <button id="startButton" onclick="startTimer()">시작</button>        <button id="startButton" on click="startTimer()">시작</button>        <button id="startButton" on click="startTimer()">시작</button><button id="startTimer()">시작</button>
+        <button onclick="pauseTimer()">일시 정지</button>        <button on click="pauseTimer()">일시 정지</button>        <button on click="pauseTimer()">일시 정지</button><button on click="pauseTimer()">일시 정지</button>
+        <button onclick="resetTimer()">초기화</button>        <버튼 on click="resetTimer()">초기화</button>        <버튼 on click="resetTimer()">초기화</button><버튼 on click="resetTimer()">초기화</button>
+    </div>    </div>    </div> </div>
+    <audio id="endAudio">    <audio id="endAudio">    <audio id="endAudio"> <audio id="endAudio">
+        <source src="alarm.mp3" type="audio/mpeg">        <source src="alarm.mp3" type="audio/mpeg">        <source src="alarm.mp3" type="audio/mpeg"> <source src="alarm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.        브라우저에서 오디오 요소를 지원하지 않습니다.        브라우저에서 오디오 요소를 지원하지 않습니다.        브라우저에서 오디오 요소를 지원하지 않습니다.
+    </audio>    </audio>    </audio> </audio>
+
+    <script>    <대본>    <스크립트> <대본>
+        let timer;        타이머를 허용합니다.        let timer;        타이머를 허용합니다.
+        let totalTime = 60;  // 기본 1분 (60초)        totalTime = 60; // 기본 분(60 초)        totalTime = 60; // 기본 분(60 초) totalTime = 60; // 기본 분(60 초)
+        let remainingTime = totalTime;        남은 시간 = 총 시간;        남은 시간 = 총 시간, 남은 시간  = 총 시간,
+        let isActive = false;        let is Active = false;        let is Active = false; let is Active = false;
+<!DOCTYPE html><!DOCYPE html>
+<html lang="ko"><html lang="ko">
+<head><머리>
+    <meta charset="    <meta charset="UTF-8">UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.    <meta name="viewport" content="width=device-width, initial-scale=1.0">0">
+    <title>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</title>    <title>천안호수초등학교 전교학생자치회 회의 발언 타이머 시스템</title>
+    <style>    <스타일>
+        body {        육신 {
+            font-family:            글꼴-패밀리: Arial, sans-serif; 심방, 산세리프;
+            display: flex;            디스플레이: 플렉스;
+            flex-direction: column;            플렉스 direction: 열;
+            align-items: center;            정렬 - items: 중앙;
+            justify-content: center;            정당화-내용: 중심;
+            height: 100vh;            높이: 100vh;            높이: 100vh; 높이: 100vh;
+            margin: 0;            여백: 0;            여백: 0; 여백: 0;
+            background-color: #121212;            background-color: #121212;            background-color: #121212; background-color: #121212;
+            color: #ffffff;            color: #ffffff;            색상: #ffffff; 색상: #ffffff;
+        }        }        }        }
+        .timer {        .타이머 {        .타이머 {.타이머 {
+            font-size: 5em;            글꼴 크기: 5em;            글꼴 크기: 5em; 글꼴 크기: 5em;
+            color: #ff0000;            색상: #ff0000;            색상: #ff0000; 색상: #ff0000;
+            background: #000000;            배경: #000000;            배경: #000000; 배경: #0000;
+            padding: 20px;            패딩: px;            패딩: px; 패딩: px;
+            border-radius: 10px;            국경-radius: px;            국경-radius: px; 국경-radius: px;
+            margin-top: 20px;            여백 상단: 20 px;            여백 상단: px, 여백 상단: 20px,
+        }        }        }        }
+        .controls {        .controls {        .controls {.controls {
+            margin-top: 20px;            여백 상단: 20 px;            여백 상단: px, 여백 상단: 20px,
+        }        }        }        }
+        button, input {        버튼, 입력 {        버튼, 입력 { 버튼, 입력 {
+            margin: 5px;            여백: px;            여백: px; 여백: px;
+            padding: 10px 20px;            패딩 : 10 px 20 px;            패딩 : px 20px, 패딩 : 10px 20px;
+            font-size: 1em;            글꼴 크기: 1em;            글꼴 크기: 1em; 글꼴 크기: 1em;
+            background-color: #333333;            background-color: #333333;            background-color: #333333; background-color: #333333;
+            color: #ffffff;            color: #ffffff;            색상: #ffffff; 색상: #ffffff;
+            border: none;            테두리: 없음;            테두리: 없음; 테두리: 없음;
+            border-radius: 5px;            국경-radius: 5 px;            국경-radius: px; 국경-radius: 5px;
+            cursor: pointer;            커서: 포인터;            커서: 포인터; 커서: 포인터;
+        }        }        }        }
+        button:disabled, input:disabled {        버튼:사용 안 함, 입력:사용 안 함 {        버튼:비활성화, 입력:비활성화된 {버튼:사용 안 함, 입력:사용 안 함 {
+            background-color: #555555;            background-color: #555555;            background-color: #555555; background-color: #555555;
+            cursor: not-allowed;            커서: allowed 아님;            커서: allowed 없음; 커서: 허용된 아님;
+        }        }        }        }
+        button:hover:not(:disabled), input:hover:not(:disabled) {        버튼:hover:not(:disabled), 입력:hover:not(:disabled) {        버튼:hover:not(:disabled), 입력:hover:not(:disabled) {버튼:not(:disabled), 입력:not(:disabled)} {
+            background-color: #555555;            background-color: #555555;            background-color: #555555; background-color: #555555;            배경색: #555555; 배경색: #5555; 배경색: #555555;
+            font-size: 5em;            글꼴 크기: 5em;            글꼴 크기: 5em; 글꼴 크기: 5em;
+            color: #ff0000;            색상: #ff0000;
+            background: #000000;            배경: #000000;
+            padding: 20px;            패딩: px;
+            border-radius: 10px;            국경-radius: px;
+    </style>    </스타일>    </스타일> </스타일>
+</head></머리></머리></머리>
+        .controls {        .controls {
